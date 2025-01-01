@@ -9,14 +9,16 @@ import Home from './components/Home/Home';
 function App() {
 
   return (<>
-  <Box style={{height:"100vh"}}>
+  <header>
+  <Box style={{height:"100vh"}} >
     <Container>
 
 <Home/>
 
     </Container>
   </Box>
- 
+
+  </header>
   </>
     
   )

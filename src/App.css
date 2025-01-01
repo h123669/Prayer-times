@@ -1,9 +1,15 @@
-html{
+html,body{
     direction: rtl;
     overflow-x: hidden;
+    background-color: #525B44;
+}
+body{
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box
 }
 
-body{
+header{
     background-color: #525B44;
-
 }

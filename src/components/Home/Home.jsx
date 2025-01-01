@@ -18,21 +18,21 @@ export default function Home() {
     let [Name, setName] = useState()
     
   return <>
-    <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap sx={{justifyContent: "space-around"}}
+    <Stack spacing={{ xs: 1, sm: 2 }} direction={{ xs: "column", sm: "row" }} useFlexGap sx={{justifyContent: "space-around"}}
             style={{color:"white"}}>
             <Box >
-              <Typography variant='h6' component="h2">
+              <Typography  >
               {date}{month}
               </Typography>
-            <Typography variant='h4' component="h2">
+            <Typography variant='h3' component="h2">
             {city === 'القاهرة' ? 'القاهرة' : city}
               </Typography>
             </Box>
             <Box>
-            <Typography variant='h6' component="h2">
+            <Typography  >
             متبقي من الوقت {Name}
               </Typography>
-            <Typography variant='h4' component="h2">
+            <Typography  >
             {timer}
               </Typography>
             </Box>

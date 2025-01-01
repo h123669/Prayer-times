@@ -22,11 +22,14 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import moment from 'moment';
 import 'moment/dist/locale/ar';
+import { useRef } from 'react';
 
 
 
 
 export default function CardMain({ city, setCity, setTimer,setName }) {
+  const intervalRef = useRef(null);
+
   const [timing, setTiming] = useState({});
   const [sunrise, setSunrise] = useState([
     "القاهرة", "الإسكندرية", "المنصورة", "الجيزة", "أسوان",
@@ -79,17 +82,17 @@ export default function CardMain({ city, setCity, setTimer,setName }) {
   useEffect(() => {
     getDate(city);
 
-    let interval =setInterval(() => {
-      setTimer(()=>{
-        setTimeUP()
-      })
-      
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(() => {
+      setTimeUP();
     }, 1000);
     
-    return (()=>{
-      clearInterval(interval)
-    })
-
+    return () => {
+      clearInterval(intervalRef.current);
+    };
   }, [city]);
 
   const prayerTimes = [
