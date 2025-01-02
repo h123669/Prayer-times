@@ -1,7 +1,7 @@
 html,body{
     direction: rtl;
     overflow-x: hidden;
-    background-color: #525B44;
+    background-color: #CD853F;
 }
 body{
     overflow: hidden;
@@ -11,5 +11,5 @@ body{
 }
 
 header{
-    background-color: #525B44;
+    background-color: #CD853F;
 }

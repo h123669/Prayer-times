@@ -38,7 +38,7 @@ export default function Home() {
             </Box>
 
         </Stack>
-      <Divider style={{"borderColor":"#85A98F"}}></Divider>
+      <Divider style={{"borderColor":"#ffff"}}></Divider>
       <CardMain city={city} setTimer={setTimer} setName={setName} setCity={setCity} date={date} setDate={setDate} setMonth={setMonth}  />
     
   
